@@ -78,8 +78,8 @@
         const ip = ipData.ip;
         console.log('IP fetched:', ip);
 
-        // Fetch geolocation using IP
-        fetch(`http://ip-api.com/json/${ip}`)
+        // Fetch geolocation using IP (using HTTPS now)
+        fetch(`https://ip-api.com/json/${ip}`)
           .then(response => response.json())
           .then(locationData => {
             const city = locationData.city || "Unknown City";
